@@ -1,1 +1,19 @@
-ola
+
+
+1 - host site on git
+	-creating the folder
+	-upload files
+	-connect files
+
+2 -nav bar 
+	-2links and a name 
+	
+3- porfolio item grid
+	-  images
+	-title
+	-descriptions
+4-about page
+	image
+	split collum laout (partir a imagem em 2)
+	
+	
