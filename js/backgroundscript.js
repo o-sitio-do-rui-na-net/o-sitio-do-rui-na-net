@@ -1,56 +1,4 @@
 
-const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext("2d");    //context
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
-
-
-const setUpCanvas = () => {
-    // Feed the size back to the canvas.
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-};
-
-let particlesArray; 
-
-
-//mouse costum object
-let mouse ={
-    x:null,
-    y:null,
-    radius:((canvas.height/80) * (canvas.width/80))
-
-}
-
-
-
-window.addEventListener('resize', () => {
-
-    setUpCanvas(); // mete nova info no tamanho do canvas
-    
-    mouse.radius = ((canvas.height/80) * (canvas.width/80));
-
-
-    init();     // ao invez de chamar o init ver se aumenta ou diminui e adicionar ou remover particulas.
-    
-});
-
-window.addEventListener('mouseout',
-function(){
-    mouse.x=undefined;
-    mouse.y=undefined;
-}
-);
-
-window.addEventListener('mousemove',
-function(event){
-    mouse.x=event.x;
-    mouse.y=event.y;
-
-});
-
-
-
 //create particle object
 class Particle{
     constructor(x,y,directionX,directionY,size,color){
@@ -69,7 +17,7 @@ class Particle{
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.size,0,
             Math.PI*2,false);
-        ctx.fillStyle='8c5523';
+        ctx.fillStyle='#8c5523';
         ctx.fill();
 
 
@@ -127,28 +75,99 @@ class Particle{
 }
 
 
-function init(){
-particlesArray = [];
-
-let numberOfParticles = (canvas.height * canvas.width)  / 9000  ; //
 
 
-for(let i=0 ; i <numberOfParticles; i++){
+
+
+function drawMyName(){
+    let fontfamily = 'Consolas';
+    ctx.font = 'normal 7em Comic Sans MS,Arial,monospace';
+    ctx.fillStyle='cornflowerblye';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = "alphabetic";
+    ctx.direction ="ltr";
+
+
+    let text = "Rui Pedro";
+    let metrics =  ctx.measureText(text);
+    let w = metrics.width;
+
+    ctx.fillText(text , innerWidth/2 , innerHeight/2);
+
+
+}
+
+
+
+
+
+
+
+
+const canvas = document.getElementById("canvas1");
+const ctx = canvas.getContext("2d");    //context
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+
+
+
+
+
+
+//globals
+let particleColor1 = '#ffffff';
+let particleColor2 = '#ffffff';
+
+
+const setUpCanvas = () => {     
+    // Feed the size back to the canvas.
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+ 
+};
+
+let particlesArray; 
+
+
+//mouse costum object
+let mouse ={
+    x:null,
+    y:null,
+    radius:((canvas.height/100) * (canvas.width/100))
+
+}
+
+
+
+window.addEventListener('resize', () => {
+
+    setUpCanvas(); // mete nova info no tamanho do canvas
     
-let size =(Math.random()  * 5 ) + 1 ;
+    mouse.radius = ((canvas.height/100) * (canvas.width/100));
 
-let x =  (Math.random() * ((innerWidth - size *2 ) - (size*2 )) + size*2 );
-let y =  (Math.random() * ((innerHeight - size *2 ) - (size*2 )) +  size*2 );
 
-let directionX = ( Math.random() * 5   ) - 2.5;
-let directionY = ( Math.random() * 5   ) - 2.5;
+    init();     // ao invez de chamar o init ver se aumenta ou diminui e adicionar ou remover particulas.
+    
+});
 
-let color = "#8c5523";
-
-particlesArray.push(new Particle(x,y,directionX, directionY , size, color));
+window.addEventListener('mouseout',
+function(){
+    mouse.x=undefined;
+    mouse.y=undefined;
 }
+);
 
-}
+window.addEventListener('mousemove',
+function(event){
+    mouse.x=event.x;
+    mouse.y=event.y;
+
+});
+
+
+
 
 
  
@@ -190,9 +209,36 @@ let oppacityValue = 1 ;
 
     }
 
-
+    drawMyName();
 
 }
+
+
+
+function init(){
+    
+    particlesArray = [];
+    
+    let numberOfParticles = (canvas.height * canvas.width)  / 9000  ; //
+    
+    
+    for(let i=0 ; i <numberOfParticles; i++){
+        
+    let size =(Math.random()  * 5 ) + 1 ;
+    
+    let x =  (Math.random() * ((innerWidth - size *2 ) - (size*2 )) + size*2 );
+    let y =  (Math.random() * ((innerHeight - size *2 ) - (size*2 )) +  size*2 );
+    
+    let directionX = ( Math.random() * 5   ) - 2.5;
+    let directionY = ( Math.random() * 5   ) - 2.5;
+    
+    let color = "#8c5523";
+    
+    particlesArray.push(new Particle(x,y,directionX, directionY , size, color));
+    }
+    
+    }
+    
 
 init();
 
