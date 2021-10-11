@@ -17,7 +17,17 @@ class Particle{
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.size,0,
             Math.PI*2,false);
-        ctx.fillStyle='#8c5523';
+
+
+        if(this.size<4){
+          
+            ctx.fillStyle='#32bfbf';
+           
+        }else{
+            ctx.fillStyle='#a83e32';
+        }
+        
+        
         ctx.fill();
 
 
@@ -47,18 +57,20 @@ class Particle{
 
             if(mouse.x <this.x && this.x < canvas.width - this.size*10){
                 this.x+=10;
+                this.directionX =  - this.directionX ;
 
             }if(mouse.x>this.x && this.x >this.size*10){
                      this.x-=10;
+                     this.directionX =  - this.directionX ;
             }
 
             if(mouse.y < this.y && this.y <canvas.height -this.size*10 ){
                     this.y+=10;
-
+                    this.directionY =  - this.directionY ;
             }
             if(mouse.y > this.y && this.y > this.size*10 ){
                     this.y -=10;
-
+                    this.directionY =  - this.directionY ;
             }
 
         }
@@ -112,12 +124,6 @@ canvas.height = window.innerHeight
 
 
 
-
-
-
-//globals
-let particleColor1 = '#ffffff';
-let particleColor2 = '#ffffff';
 
 
 const setUpCanvas = () => {     
@@ -198,7 +204,7 @@ let oppacityValue = 1 ;
             if(distance  <( canvas.width/7 )* (canvas.height/7)){
 
                 oppacityValue = 1 - (distance/17639) ;
-                ctx.strokeStyle='rgba(140,85,31,'+oppacityValue+')';
+                ctx.strokeStyle='rgba(82, 57, 196,'+oppacityValue/3+')';
                 ctx.lineWidth=1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x , particlesArray[a].y);
