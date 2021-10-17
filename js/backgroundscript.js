@@ -1,4 +1,16 @@
 
+
+const canvas = document.getElementById("canvas1");
+const ctx = canvas.getContext("2d");    //context
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+
+
+
+
+
+
+
 //create particle object
 class Particle{
     constructor(x,y,directionX,directionY,size,color){
@@ -110,16 +122,6 @@ function drawMyName(){
 }
 
 
-
-
-
-
-
-
-const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext("2d");    //context
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
 
 
 

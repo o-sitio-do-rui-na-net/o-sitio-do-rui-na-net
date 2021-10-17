@@ -11,8 +11,7 @@
     
         <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    
-
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
 
     
@@ -22,14 +21,17 @@
   <body >
     
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    
 
 
 
-
-          <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Rui Pedro</a>
+          <header >
+            <nav class="navbar navbar-expand-lg navbar-light " id="hCostum">
+                <div class="container-fluid" >
+                  <a class="navbar-brand" href="index.html" id="MatrixTextNoSize">Rayki</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
@@ -39,38 +41,57 @@
                         <a class="nav-link active" aria-current="page" href="index.html"></a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html" id="MatrixTextNoSize">+ About me</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html" id="MatrixTextNoSize">Get in contact</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="fullbackgroundcanvaswithmouse.html">Disabled :D</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </nav>
 
-</header>
+  </header>
+
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <main>
- 
+  <canvas id="canvas1"></canvas>
+  <script src="js/canvasmousetrailscripts.js"></script>
 
 
   <section id="ss1">
    <div class="container px-4 py-5" id="custom-cards">
    <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">Rui Pedro<span class="text-muted"> Junior developer and programer</span></h2>
-      <p class="lead">Hello world, this my web portfolio where i show some of my previous projects
-         in order to display some of the tecnologies that i've worked with.</p>
-      <p class="lead"><a class="text-muted-unstyled" href="#">? Let´s work together!</a></p>
+      <h2 class="featurette-heading" id="MatrixText">Rui Pedro</h2>
+      <span class="text-muted" > <br>Junior developer and programer</span>
+      <p class="lead" >Hello world, this my web portfolio where i show some of my previous projects
+         in order to display some of my skils and tecnologies that i've worked with.</p>
+      <p class="lead"><a class="text-muted-unstyled" href="about.html" id="FireText"> Find Out More About Me..</a></p>
      
   
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-fluid mx-auto"   src="assets/eusol white.jpg" data-holder-rendered="true" style="border-radius: 500px;">
+      <img class="featurette-image img-fluid mx-auto"   src="assets/eusol white x7.jpg" data-holder-rendered="true" >
     </div>
   </div></div>
 </section>
@@ -79,16 +100,17 @@
 
     
 
+<section id="sec_projs">
 <div id="trycardhero">
 
-  <canvas id="canvas1"></canvas>
-        <script src="js/backgroundscript.js"></script>
+ 
 <div class="container px-4 py-5" id="custom-cards">
-<h2 class="pb-2 border-bottom">Some of my Projects</h2>
+<h2 class="pb-2 border-bottom" id="ThunderText">Some of my Projects</h2>
 
 <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
   <div class="col">
-    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('https://th.bing.com/th/id/OIP.Xyr9Zw5XAPMmiamYfxaelwHaE8?pid=ImgDet&rs=1');">
+    <a href="/speedymanager.html">
+    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" id="portfoil"style="background-image: url('https://cdn.discordapp.com/attachments/679439003438546945/898981485128876062/logo.png');">
       <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" id="indexProjectsPresentation">Speedy Manager</h2>
         <ul class="d-flex list-unstyled mt-auto">
@@ -106,9 +128,10 @@
         </ul>
       </div>
     </div>
+    </a>
   </div>
   <div class="col">
-    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" id="portfoil" style="background-image: url('unsplash-photo-2.jpg');">
       <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold" id="indexProjectsPresentation">Video classifier</h2>
         <ul class="d-flex list-unstyled mt-auto">
@@ -128,7 +151,7 @@
     </div>
   </div>
   <div class="col">
-    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+    <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" id="portfoil" style="background-image: url('unsplash-photo-3.jpg');">
       <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
         <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">XinZhau Rescue</h2>
         <ul class="d-flex list-unstyled mt-auto">
@@ -150,40 +173,11 @@
 </div>
 </div>
 </div>
+</section>
 
 
 
 
-
-
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-<div class="row align-items-center g-lg-5 py-5">
-<div class="col-lg-7 text-center text-lg-start">
-  <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
-  <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-</div>
-<div class="col-md-10 mx-auto col-lg-5">
-  <form class="p-4 p-md-5 border rounded-3 bg-light">
-    <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating mb-3">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-    <hr class="my-4">
-    <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
-  </form>
-</div>
-</div>
-</div>
 
 
   
@@ -202,7 +196,7 @@
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
   </ul>
-  <p class="text-center text-muted">© 2021 Company, Inc</p>
+  <p class="text-center text-muted">© 2021 Rui Pedro aka Rayki, Works well :D:D:D</p>
 </footer>
 </div>
 

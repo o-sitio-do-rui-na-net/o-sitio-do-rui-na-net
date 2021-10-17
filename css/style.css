@@ -6,23 +6,148 @@
 body,
 html {
     height: 100%;
+    background-color: #fff;
 }
 
-#canvas1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
+a:link {
+    text-decoration: none;
 }
 
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
 
 #indexProjectsPresentation {
     color: violet;
+
 }
 
 #ss1 {
     height: 90vh;
 
+
 }
 
-#index1 {}
+#ThunderText {
+    background: url(https://i.gifer.com/RMfD.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Helvetica, sans-serif;
+
+}
+
+#FireText {
+
+    background: url(https://acegif.com/wp-content/gifs/fire-15.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#MatrixText {
+    background: url(https://user-images.githubusercontent.com/169328/62211026-6f480280-b395-11e9-9d64-cd059663054b.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Impact, Helvetica, sans-serif;
+    font-size: 8REM;
+
+}
+
+#MatrixTextNoSize {
+    background: url(https://user-images.githubusercontent.com/169328/62211026-6f480280-b395-11e9-9d64-cd059663054b.gif);
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Impact, Helvetica, sans-serif;
+
+}
+
+#SliderAboutMe {
+
+    z-index: -1;
+}
+
+#zindex {
+    z-index: 0;
+}
+
+#COSTUMTEXTFORHEADER {
+
+    font-family: Impact, Helvetica, sans-serif;
+
+}
+
+
+#hCostum {
+    background-color: #ffffff;
+
+}
+
+
+
+#canvas1Contact {
+    position: fixed;
+    z-index: 1;
+
+}
+
+
+#canvas1About {
+    position: fixed;
+    z-index: 1;
+
+}
+
+#canvas1 {
+    position: fixed;
+    z-index: 0;
+}
+
+#POSTOFFICESENDER {
+    z-index: 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#portfoil {
+
+    transition:
+        transform 750ms cubic-bezier(.5, 0.5, 1),
+        opacity 250ms linear;
+
+}
+
+#portfoil:hover {
+
+    transform: scale(1.2);
+    overflow: hidden;
+
+
+}
