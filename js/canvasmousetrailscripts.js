@@ -12,6 +12,9 @@ if(page == "index.html"){
 }else if(page =="contact.html"){
     canvas = document.getElementById("canvas1Contact");
 }
+else if(page =="speedymanager.html"){
+    canvas = document.getElementById("canvasSpeedy");
+}
 
 
 
@@ -66,8 +69,8 @@ class Particle{
     update(){
         this.size -=0.05;
         if(this.size < 0 ){
-            this.x = (mouse.x + ((Math.random()*50)-10));
-            this.y = (mouse.y + ((Math.random()*50)-10));
+            this.x = (mouse.x + ((Math.random()*50)-20));
+            this.y = (mouse.y + ((Math.random()*50)-20));
             this.size = ((Math.random()*3)+2);
             this.weight = (Math.random()*2)-0.5;
         }

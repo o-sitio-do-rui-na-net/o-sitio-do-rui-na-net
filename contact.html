@@ -14,7 +14,9 @@
       
   
       <link rel="stylesheet" href="css/style.css">
-  
+      <link rel="stylesheet" href="css/menu.css">    
+      <link href="css/navbar.css" rel="stylesheet">
+      <script src="js/bootstrap.bundle.min.js"></script>
       
       <!-- Custom styles for this template -->
      
@@ -23,63 +25,88 @@
   <canvas id="canvas1Contact"></canvas>
   <script src="js/canvasmousetrailscripts.js"></script>
 
-
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Rui Pedro</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand navbar-light " aria-label="Tenth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+          <ul class="navbar-nav">
+            <li class="nav-item" >
+              <a class="nav-link" href="index.html" >Main</a>
+            </li>
+            <li class="nav-item" >
+              <a class="nav-link"  href="about.html" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" id="MatrixTextNoSize" href="contact.html">Contact</a>
+            </li>
+     
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                <li><a class="dropdown-item" href="speedymanager.html">SpeedyManager</a></li>
+                <li><a class="dropdown-item" href="videoclassifer.html">Video classifier</a></li>
+                <li><a class="dropdown-item" href="unityworks.html">Unity works</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
-
+      </div>
+    </nav>
 </header>
-
+<div class="menu-wrap">
+  <input type="checkbox" class="toggler">
+  <div class="hamburger"><div></div></div>
+  <div class="menu" >
+    <div>
+      <div>
+        <ul>
+          <li><a href="index.html"  >Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="index.html#sec_projs" >Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 <div class="container col-xl-10 col-xxl-8 px-4 py-5">
   <div class="row align-items-center g-lg-5 py-5">
-    <div class="col-lg-7 text-center text-lg-start">
+    <div class="col-lg-7 text-center text-lg-start" id="OCANVASEGRANDEMASEUSOUMAIOR">
       <h1 class="display-4 fw-bold lh-1 mb-3">Get in touch — let’s work together.</h1>
-      <p class="col-lg-10 fs-4">Address</p>
+      <p class="col-lg-10 fs-4" >Address: <br> R. D. Nuno Alvares Pereira, Lançada, Montijo.</p>
+      <p class="col-lg-10 fs-4" > Email : ruipedrooffice@gmail.com </p>
+      <p class="col-lg-10 fs-4" > LinkedIn : <a href="https://www.linkedin.com/in/ruipedro/">/in/ruipedro</a> </p>
+      <p class="col-lg-10 fs-4" > Cell Phone : +351 918827842 </p>
+      
     </div>
-    <div class="col-md-10 mx-auto col-lg-5" id="POSTOFFICESENDER" >
-        <form class="p-4 p-md-5 border rounded-3 bg-light" action="https://formsubmit.co/ruipedrooffice@gmail.com    " method="POST" >
+    <div class="col-md-10 mx-auto col-lg-5" id="OCANVASEGRANDEMASEUSOUMAIOR" >
+        <form class="p-4 p-md-5 border rounded-3 bg-light" action="https://formsubmit.co/e97611072fcf2bffb16ca953c8ec265f  " method="POST" id="POSTOFFICESENDER">
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required >
-          <label for="floatingInput">Email address</label>
+          <input type="email" class="form-control" id="floatingInputEmail"  required >
+          <label for="floatingInputEmail">Email address</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" name="name" required  placeholder="how would you like to identify yourself" > 
+          <input type="text" class="form-control" id="floatingInput" name="name" required  > 
           <label for="floatingInput">Name:</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control"  placeholder="your message goes here..">
-          <label for="floatingPassword">Message</label>
+          <textarea name="message"  placeholder="  What’s your message?" rows="3" style="width: 100%; border-color: lightgray;" required></textarea>
         </div>
-   
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Send Me an Email</button>
         <hr class="my-4">
-        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+  
+          <button class="w-100 btn btn-lg btn-primary" type="submit" style="z-index: 1; color: rgb(255, 255, 255); background-color: rgb(66, 66, 66); font-weight: bold;" >Send Me an Email</button>
+ 
+        
+        <hr class="my-4">
+        <small class="text-muted">This system is powered by <a href="https://formsubmit.co/" style="text-decoration: none; color: lightgray;">Formsubmit</a>. <br> Formsubmit is free to play endpoint for email sending, if there is any trouble please contact me using other alternative :D</small>
       </form>
 
      
@@ -93,8 +120,8 @@
 
 
 
-<div class="container">
-  <footer class="py-3 my-4">
+<div class="container" >
+  <footer class="py-3 my-4" >
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>

@@ -39,7 +39,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 4;
 }
 
 .showcase .showcase-inner {
@@ -79,7 +79,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: 4;
 
 }
 
@@ -129,7 +129,7 @@ body {
 .menu-wrap .hamburger>div::after {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 4;
     top: -10px;
     width: 100%;
     height: 6px;
