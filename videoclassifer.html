@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="author" content="Rui Pedro">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords" content="HTML, CSS, JavaScript">
+      <meta name="description" content="sharing my personal web page on the internet">
+      <title>Rui Pedro Online</title>
+      
+      
+          <!-- Bootstrap core CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+      
+  
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">    
+      <link href="css/navbar.css" rel="stylesheet">
+      <script src="js/bootstrap.bundle.min.js"></script>
+      
+      <!-- Custom styles for this template -->
+     
+      </head>
+<body>
+  <canvas id="canvasVideoClass"></canvas>
+  <script src="js/canvasmousetrailscripts.js"></script>
+  <header>
+    <nav class="navbar navbar-expand navbar-light " aria-label="Tenth navbar example">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+          <ul class="navbar-nav">
+       
+            <li class="nav-item" >
+              <a class="nav-link"  href="index.html" >About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+     
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html#sec_projs" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                <li><a class="dropdown-item" href="speedymanager.html">SpeedyManager</a></li>
+                <li><a class="dropdown-item" href="videoclassifer.html">Video classifier</a></li>
+                <li><a class="dropdown-item" href="unityworks.html">Unity works</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+
+<div class="menu-wrap">
+  <input type="checkbox" class="toggler">
+  <div class="hamburger"><div></div></div>
+  <div class="menu" >
+    <div>
+      <div>
+        <ul>
+        
+          <li><a href="index.html" >About</a></li>
+          <li><a href="index.html#sec_projs" >Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="z-index: -1;">
+    <h5 style="text-align: center; font-size: 3.5rem; margin-bottom: 3%;">Surveilance System Prototype</h5>
+    <p class="card-text">This project consists in a video classifier that can be used as the basis for a surveillance system that detects and distinguish different objects on Realtime footage.</p>
+    <img src="assets/piv/1.PNG"  class="d-block mx-lg-auto img-fluid" width="95%" height="auto" style="border-radius: 3%; border-width: 5%; border-color: greenyellow; border-style: solid;" />
+    
+</div>
+
+
+
+
+<div class="container z-index:0;">
+   
+       
+        <div class="card-body" >
+          <h5 class="card-title">Objective and Context </h5>
+          <p class="card-text">In the context of image processing, and in order to approve a disciple, we the students had to develop an algorithm to detect and classify moving objects in a video footage.</p>
+         
+        </div>
+        
+ 
+</div>
+
+
+
+
+
+<div class="container" style="z-index: 0; margin-top: 3%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+          <img src="assets/piv/resultF.png"  class="d-block mx-lg-auto img-fluid" width="100%" height="250"  style="border-radius: 3%; border-width: 5%; border-color: greenyellow; border-style: solid;" />
+    
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Detection Process</h5>
+          <p class="card-text">This consisted in subtracting the parts of the image that are static, the background, to the current frame image in order to detect the presence of new objects. </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container" style="z-index: 0; margin-top: 3%;">
+    <div class="row g-0">
+        <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Classification of Objects</h5>
+              <p class="card-text">In order to distinguish humans from cars we used the area, and the morphology of the white dots, 
+                  present in result of the subtraction of the background to the current frame (the back and white image above). 
+                  This together with some morphologic operators its possible to magnify these white dots facilitating the classification process.
+                  <br> The classification algorithm essentially consists in making a threshold for the area, width and height expected for each different object in the field of view.</p>
+           
+            </div>
+          </div>
+      <div class="col-md-4">
+          <img src="assets/piv/1.png"  class="d-block mx-lg-auto img-fluid" width="100%" height="250"  style="border-radius: 3%; border-width: 5%; border-color: greenyellow; border-style: solid;" />
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container z-index:0;">
+   
+       
+    <div class="card-body" >
+      <h5 class="card-title">Consideration about this work</h5>
+      <p class="card-text">This system is a very simple implementation of a Realtime footage classification, with proper adjustment for the angles of a static camera it can pretty much distinguish anything given that the threshold and morphologic operators are correctly applied.
+          <br> However, a system like this with no AI can only work for one camera angle, which means multiple cameras or multiple angles require multiple instances of the script adapted to the angles and cameras itself.
+
+     
+    </div>
+    
+
+</div>
+
+
+
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item" id="zindexar_footer" ><a href="#" class="nav-link px-2 text-muted">Up</a></li>
+        <li class="nav-item"id="zindexar_footer"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+        <li class="nav-item"id="zindexar_footer"><a href="index.html" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2021 Rui Pedro, does nice things  ;p</p>
+  </footer>
+  </div>
+  
+</body>
+</html>
