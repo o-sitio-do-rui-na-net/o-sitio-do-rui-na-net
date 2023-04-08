@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Example</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    pre {
+      background-color: #ffffff;
+      border: 1px solid #d3d3d3;
+      padding: 10px;
+      margin: 10px;
+      overflow-x: auto;
+    }
+    code {
+      color: #000000;
+    }
+    .comment {
+      color: #3f7f5f;
+      font-style: italic;
+    }
+    .keyword {
+      color: #7f0055;
+      font-weight: bold;
+    }
+    .string {
+      color: #2a00ff;
+    }
+    .function-name {
+      color: #000080;
+    }
+  </style>
+</head>
+<body>
+ 
+<h2>Initial Problem:</h2>
+<p>This program was initially conceived as a <strong>Gui</strong> for a command line command runner for Kubernetes <em>k get logs *** -n **</em> command and other frequent commands that monitor a Kubernetes system.</p>
+<p>However, the limitation was that the program had to be built using only <strong>java 1.8</strong> due to being the only available that could interact with windows command line available inside of a Citrix Windows Virtual Environment that had access to the Kubernetes cluster.</p>
+<p>A simple batch script could take care of the engine to run Kubernetes commands and switch some placeholders for actual pod/namespace names however, it wouldn’t give us the Gui with buttons that we needed for user experience.</p>
+<h2>Choosing of Technologies:</h2>
+<p><strong>Java 1.8</strong> was the way to go, a <em>jre</em> pretty much the was the only thing available on the machine that could run our idea on. As supported in Initial problem.</p>
+<p>The Gui was built with <strong>Swing</strong> since as opposed to <em>jfx</em> hasn’t yet been discontinued and it’s a commonly known technology that can be used with Window Builder and not only that people are familiarized with it so it would also be familiar to maintain in the future.</p>
+
+
+<h2>Basics for the construction of a Java program to run commands on the windows command line:</h2>
+<p>This is essentially resolving / developing a around the following lines of code:</p>
+
+<pre>
+  <code>
+    <span class="function-name">public</span> <span class="keyword">void</span> openCmdWindowAndRunCommand(<span class="string">String command</span>) <span class="keyword">throws</span> IOException , InterruptedException  {
+      Runtime.getRuntime().exec(command);
+    }
+  </code>
+</pre>
+<p>or in most cases like:</p>
+
+<pre>
+    <code>
+      <span class="keyword">public</span> Process openCmdWindowAndRunCommand(<span class="string">String comando</span>) <span class="keyword">throws</span> IOException, InterruptedException {
+        Process process;
+        <span class="keyword">try</span> {
+          process = Runtime.getRuntime().exec(comando);
+        } <span class="keyword">catch</span> (IOException e) {
+          e.printStackTrace();
+          <span class="keyword">return</span> <span class="keyword">null</span>;
+        }
+
+        <span class="keyword">return</span> process;
+      }
+    </code>
+  </pre>
+
+<p>This will execute in the windows command line a string command. This could be something like a <em>“k get pods -n abc”</em> or a <em>“java -version”</em>, a <em>curl</em>, an <em>ftp</em> you get the idea. However, when java runs a command, it does not open the command line! You don’t see it!</p>
+<p>To counter that if you think about it, you will just need to run a command to open a command line window to run another command inside that opened window. Luckily there is an easy implementation to that which is just wrapping your commands as follows:</p>
+<pre>
+    <code>
+      <span class="keyword">String</span> ABRIR_O_CMD=<span class="string">"cmd /c start cmd.exe /K \"echo hello Rui! \""</span>;
+    </code>
+  </pre>
+<p>The rest of the algorithms should reside in swapping character placeholders in your string commands :D</p>
+<p>These are pretty much the two main features on how to achieve a program like this using Java syntax.</p>
+
+<h2>Gui</h2>
+<p>It obviously looks like a Java swing application :D although that might seem a little bit outdated its usefulness helps team members that used it saving a lot of time over typing these same commands.</p>
+ 
+<img src="assets/CloudKuberneter/1.png">
+<img src="assets/CloudKuberneter/2.png">
+<img src="assets/CloudKuberneter/3.png">
+</body>
+</html>
